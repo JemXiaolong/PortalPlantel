@@ -1,26 +1,120 @@
-.navbar {
-  background-color: #333;
-  padding: 1rem;
+/* Navbar.css */
+
+.navbar-container {
+  flex-grow: 1;
 }
 
-.nav-list {
-  list-style: none;
+.toolbar {
   display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
+  /*justify-content: space-between;*/
+  align-items: center;
+
+  .menu-button{
+    display: none;
+  }
 }
 
-.nav-list li {
-  margin: 0 15px;
+.nav-links {
+  #b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8{
+    color: #ffffff;
+  }
 }
 
-.nav-list a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.nav-links.active {
+  display: block; /* Muestra el menú en pantallas pequeñas cuando está activo */
 }
 
-.nav-list a:hover {
-  color: #ddd;
+.nav-links{
+
+  #b1:hover, #b2:hover, #b3:hover, #b4:hover, #b5:hover, #b6:hover, #b7:hover, #b8:hover{
+  color: #bcf374;
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.title {
+  color: #fff;
+}
+
+.navbar #barra {
+  background-color: transparent; /* Color de fondo inicial */
+  transition: background-color 0.3s; /* Suaviza el cambio de color */
+}
+
+.navbar.scrolled {
+  background-color: #fff; /* Cambia el color de fondo cuando se hace scroll */
+}
+
+/* Mostrar el icono del menú en pantallas pequeñas */
+@media (max-width: 768px) {
+
+  .toolbar{
+    background-color: #fff;
+
+    .menu-button {
+      display: block;
+      font-size: 24px;
+      color: #333333;
+    }
+
+  }
+
+  .title {
+    color: #333333;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .nav-links {
+    #b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8{
+      color: #333333;
+    }
+  }
+
+  .nav-links {
+    display: none; /* Oculta el menú por defecto */
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura del navbar */
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex; /* Muestra el menú cuando está activo */
+  }
+
+  .nav-links button {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .logo {
+    margin-left: 80px;
+  }
+
+}
+
+.navbar.scrolled {
+  background-color: #fff; /* Cambia el color de fondo cuando se hace scroll */
+  transition: background-color 0.3s; /* Suaviza el cambio de color */
+
+  .title {
+    color: #333333;
+  }
+
+  .nav-links {
+    #b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8{
+      color: #333333;
+    }
+  }
 }
