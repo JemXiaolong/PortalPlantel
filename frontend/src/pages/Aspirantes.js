@@ -1,12 +1,18 @@
 import React from 'react';
-import styles from './Aspirantes.module.css';
+import Navbar from '../Navbar'; // Asegúrate de importar la Navbar correctamente
+
 function Aspirantes() {
   return (
-    
-    <div className="atyles.aspirantes-container">
-      <h1 className="aspirantes-title">Bienvenido a la página de Aspirantes</h1>
-      <h1>Hola mundo</h1>
-    </div>
+    <>
+      {/* Solo el menú de navegación */}
+      <Navbar />
+
+      {/* Contenido exclusivo para la página de aspirantes */}
+      <div className="aspirantes-container">
+        <h1 className="aspirantes-title">Bienvenido a la página de Aspirantes</h1>
+        <h1>Hola mundo</h1>
+      </div>
+    </>
   );
 }
 

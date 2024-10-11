@@ -1,0 +1,12 @@
+/* Aspirantes.module.css */
+.aspirantesContainer {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .aspirantesTitle {
+    color: darkblue;
+    font-size: 2rem;
+  }
+  

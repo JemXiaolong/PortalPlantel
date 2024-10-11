@@ -20,50 +20,81 @@ const theme = createTheme({
 
 function App() {
   return (
-    
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
         <div className="App">
-          <Navbar/>
-
-          <section className='banner'>
-            <h1>CECyTEM Xonacatlán</h1>
-          </section>
-
+          <Navbar /> {/* El menú estará en todas las páginas */}
           <main>
             <Routes>
-              <Route path="/" element={
-                <>
-                  <section id="home">
-                    <h1>SE PARTE DE LA EXPERIENCIA CECyTEM</h1>
-                    <p>Esto va a quedar bien shidooooo xd.</p>
-                  </section>
+              {/* Ruta principal "/" donde se muestra todo el contenido adicional */}
+              <Route
+                path="/"
+                element={
+                  <>
+                    <section className="banner">
+                      <h1>CECyTEM Xonacatlán</h1>
+                    </section>
 
-                  <section id="about">
-                    <h2>About Us</h2>
-                    <div className="video-grid">
-                      <iframe className="video" src="https://www.youtube.com/embed/EB7uQkNY39A?controls=0&amp;autoplay=1&amp;mute=1&amp;loop=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                      <iframe className="video" src="https://www.youtube.com/embed/t71N7YomBjA?controls=0&amp;autoplay=1&amp;mute=1&amp;loop=2" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                      <iframe className="video" src="https://www.youtube.com/embed/FLXWhXLgFvw?controls=0&amp;autoplay=1&amp;mute=1&amp;loop=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                    </div>
-                  </section>
+                    <section id="home">
+                      <br></br>
+                      <h1>SE PARTE DE LA EXPERIENCIA CECyTEM</h1>
+                    </section>
 
-                  <section id="services">
-                    <h2>¡Somos tu mejor opción!</h2>
-                  </section>
+                    <br></br>
 
-                  <section id="contact">
-                    {/* Contenido de la sección de contacto */}
-                  </section>
-                </>
-              } />
+                    <section id="about">
+                      
+                      <div className="video-grid-1">
+                      
+                        <iframe
+                          className="video"
+                          src="https://www.youtube.com/embed/EB7uQkNY39A?controls=0&amp;autoplay=1&amp;mute=1&amp;loop=1"
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+
+                        <iframe
+                          className="video"
+                          src="https://www.youtube.com/embed/t71N7YomBjA?controls=0&amp;autoplay=1&amp;mute=1&amp;loop=2"
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+
+                      <div className="video-grid-2">
+                      <iframe
+                          className="video2"
+                          src="https://www.youtube.com/embed/FLXWhXLgFvw?controls=0&amp;autoplay=1&amp;mute=1&amp;loop=1"
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+
+                    </section>
+
+                    <section id="services">
+                      <h2>¡Somos tu mejor opción!</h2>
+                    </section>
+                  </>
+                }
+              />
+
+              {/* Ruta específica para aspirantes */}
               <Route path="/aspirantes" element={<Aspirantes />} />
             </Routes>
           </main>
-
-          <br></br>
-          <br></br>
           <footer>
             <div className="social-icons">
               <a href="https://www.facebook.com/CecytemPlantelXonacatlan1" target="_blank" rel="noopener noreferrer">
