@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+# Ignorar archivos de la base de datos de Django
+*.sqlite3
+
+# Ignorar archivos compilados de Python
+__pycache__/
+
 # testing
 /coverage
 
